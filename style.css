@@ -1,0 +1,73 @@
+:root {
+  --bg-color: rgb(235, 235, 235);
+  --border : 1px solid red; /* del */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search,
+.weather-info,
+.today-forecast,
+.weather-conditions-main,
+aside {
+  padding: 10px;
+  background-color: var(--bg-color);
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1em;
+  outline: none;
+  min-width: 200px;
+  width: 100%;
+}
+
+.weather-info {
+  padding: 1em;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.days-forecast,
+.hourly-forecast {
+  padding: 10px;
+}
+
+.hourly-main-div {
+  display: flex;
+  justify-content: space-around;
+}
+.hourly-main-div > *:not(:last-child) {
+  border-right: 1px solid gray;
+}
+
+
+.weather-conditions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.days {
+  display: flex;
+  gap: 10px;
+  grid-template-columns: auto, auto, auto, auto;
+}
