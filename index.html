@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
   <body>
     <main>
@@ -17,96 +21,61 @@
             placeholder="Search for cities"
             class="search-input"
           />
+          <div class="search-suggestions"></div>
         </section>
         <section class="weather-info">
           <div class="info">
-            <h3 class="city">İstanbul</h3>
-            <p class="cor">Change of rain: %0</p>
-            <p>30&deg;C</p>
+            <h2 class="city" id="city"></h2>
+            <p id="condition"></p>
+            <h3 id="degree"></h3>
           </div>
           <div class="weather-img">
-            <img src="#" alt="#" />
+            <img src="" alt="" id="icon" />
           </div>
         </section>
         <section class="today-forecast">
-          <h3>Todays Forecast</h3>
-          <div class="hourly-main-div">
-            <div class="hourly-forecast">
-                <p class="hourly-time">9:00 PM</p>
-                <img src="#" alt="#" class="hourly-img" />
-                <p class="hourly-deg">25&deg;C</p>
-              </div>
-
-              <div class="hourly-forecast">
-                <p class="hourly-time">9:00 PM</p>
-                <img src="#" alt="#" class="hourly-img" />
-                <p class="hourly-deg">25&deg;C</p>
-              </div>
-              <div class="hourly-forecast">
-                <p class="hourly-time">9:00 PM</p>
-                <img src="#" alt="#" class="hourly-img" />
-                <p class="hourly-deg">25&deg;C</p>
-              </div><div class="hourly-forecast">
-                <p class="hourly-time">9:00 PM</p>
-                <img src="#" alt="#" class="hourly-img" />
-                <p class="hourly-deg">25&deg;C</p>
-              </div>
-          </div>
+          <h3>Today's Forecast</h3>
+          <div class="hourly-main-div" id="hourly-div"></div>
         </section>
         <section class="weather-conditions-main">
           <h3>Weather Conditions</h3>
           <div class="weather-conditions">
-            <div class="reel-feel">
-              <p><span>sembol işaretleri</span> Reel Fell</p>
-              <p>25&deg;C</p>
+            <div class="real-feel">
+              <p class="p-icon">
+                <span class="material-symbols-sharp"> thermometer </span> Real
+                Feel
+              </p>
+              <p class="values-of-conditions"></p>
             </div>
             <div class="wind">
-              <p>
-                <span>sembol işaretleri</span>
+              <p class="p-icon">
+                <span class="material-symbols-sharp"> air </span>
                 Wind
               </p>
-              <p>0.2 km/h</p>
+              <p class="values-of-conditions"></p>
             </div>
             <div class="change-of-rain">
-              <p>
-                <span>sembol işaretleri</span>
+              <p class="p-icon">
+                <span class="material-symbols-sharp"> water_drop </span>
                 Change of rain
               </p>
-              <p>40%</p>
+              <p class="values-of-conditions"></p>
             </div>
             <div class="uv-index">
-              <p>
-                <span>sembol işaretleri</span>
+              <p class="p-icon">
+                <span class="material-symbols-sharp"> sunny </span>
                 Uv Index
               </p>
-              <p>3</p>
+              <p class="values-of-conditions"></p>
             </div>
           </div>
         </section>
       </section>
 
       <aside>
-        <h3>5 Day Forecast</h3>
-        <div class="days-forecast">
-          <div class="days">
-            <p class="days-day">Today</p>
-            <img src="" alt="" class="days-img" />
-            <p class="days-case">Sunny</p>
-            <p class="days-degrees">36/47</p>
-          </div>
-          <div class="days">
-            <p class="days-day">Today</p>
-            <img src="" alt="" class="days-img" />
-            <p class="days-case">Sunny</p>
-            <p class="days-degrees">36/47</p>
-          </div>
-          <div class="days">
-            <p class="days-day">Today</p>
-            <img src="" alt="#" class="days-img" />
-            <p class="days-case">Sunny</p>
-            <p class="days-degrees">36/47</p>
-          </div>
-        </div>
+        <h3>7 Day Forecast</h3>
+        <div class="days-forecast"></div>
+        <div class="last-updated"></div>
       </aside>
     </main>
 
