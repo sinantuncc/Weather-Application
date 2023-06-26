@@ -16,6 +16,12 @@ Shows current weather conditions.
 
 Dynamic search suggestions feature is available.
 
+Includes weather conditions such as Real feel, wind, chance of rain and UV index.
+
+![weather-app-3](https://github.com/sinantuncc/Weather-Application/assets/47920760/57b36993-de67-4e73-9f58-6bafb3b38269)
+
+
+
 It does not require any installation. It is sufficient to run the "index.html" file.
 
 Used WeatherAPI.com API.
