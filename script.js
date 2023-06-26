@@ -4,6 +4,21 @@ const baseURL = "http://api.weatherapi.com/v1";
 const searchInput = document.getElementById("searchInput");
 const searchSuggestions = document.querySelector(".search-suggestions");
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getPosition);
+  }
+});
+
+function getPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+
+  let latlon = lat + "," + lon;
+
+  getWeatherData(latlon);
+}
+
 const getWeatherData = async (location = "Istanbul") => {
   let url = `${baseURL}/forecast.json?key=${apiKey}&q=${location}&days=8`;
 
